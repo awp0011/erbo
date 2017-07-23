@@ -3,6 +3,7 @@ package learing.springboot.rest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 public class HelloRestController {
 
@@ -16,5 +17,4 @@ public class HelloRestController {
 		return "See you~~~~";
 	}
 
-	
 }
