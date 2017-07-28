@@ -9,8 +9,18 @@ import learing.springboot.Schedule.ScheduleConfig;
 @SpringBootApplication
 public class Application {
 
+	private static AnnotationConfigApplicationContext annotationConfigApplicationContext;
+
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ScheduleConfig.class);
+		annotationConfigApplicationContext = new AnnotationConfigApplicationContext(ScheduleConfig.class);
+	}
+
+	public static AnnotationConfigApplicationContext getAnnotationConfigApplicationContext() {
+		return annotationConfigApplicationContext;
+	}
+
+	public static void setAnnotationConfigApplicationContext(AnnotationConfigApplicationContext annotationConfigApplicationContext) {
+		Application.annotationConfigApplicationContext = annotationConfigApplicationContext;
 	}
 }
